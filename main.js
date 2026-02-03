@@ -12,8 +12,8 @@ const products = [
     new Product(2, "Sach 2", 32000000, 3, "Book", true),
     new Product(3, "Sach 3", 800000, 20, "Book", true),
     new Product(4, "Sach 4", 1500000, 0, "Book", true),
-    new Product(5, "Toy 1", 3500000, 10, "Toy", false),
-    new Product(6, "Toy 2", 7000000, 7, "Toy", true)
+    new Product(5, "Accessories 1", 3500000, 10, "Accessories", false),
+    new Product(6, "Accessories 2", 7000000, 7, "Accessories", true)
 ];
 
 let output = "";
@@ -26,6 +26,11 @@ console.log("Cau 4:", products.filter(p => p.quantity > 0));
 
 console.log("Cau 5:", products.some(p => p.price > 30000000));
 
+console.log(
+    "Cau 6:",
+    products.filter(p => p.category === "Accessories")
+            .every(p => p.isAvailable)
+);
 
 console.log(
     "Cau 7: Tong la",
